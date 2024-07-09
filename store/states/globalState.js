@@ -1,6 +1,5 @@
 export const globalState = {
   wallet: "",
-  gereratorModal: "scale-0",
-  winnersModal: "scale-0",
-  jackpots: [],
+  fundsModal: "scale-100",
+  searchtokenModal: "scale-0",
 };

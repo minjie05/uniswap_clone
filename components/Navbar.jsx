@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { RiMenu2Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { globalActions } from "@/store/globalSlices";
 
 export const Navbar = () => {
+  const dispatch = useDispatch();
+  const { setSearchtokenModal } = globalActions;
   const { wallet } = useSelector((state) => state.globalState);
   console.log("wallet000--->", wallet);
   const [menu, setMenu] = useState(false);
@@ -23,7 +26,7 @@ export const Navbar = () => {
         {/* desktop menu section */}
         <div className="bg-[#fed7aa] w-full flex flex-row justify-between p-5 md:px-32 px-5 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
           <div className="text-2xl font-bold cursor-pointer text-[#ea580c]">
-            <Link href="/">DappLottery</Link>
+            <Link href="/">Uniswap</Link>
           </div>
           {/* nav elements */}
           <nav className="hidden lg:flex flex-row items-center text-lg font-semibold gap-8 text-[#ea580c]">

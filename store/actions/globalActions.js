@@ -2,13 +2,10 @@ export const globalActions = {
   setWallet: (state, action) => {
     state.wallet = action.payload;
   },
-  setJackpots: (state, action) => {
-    state.jackpots = action.payload;
+  setSearchtokenModal: (state, action) => {
+    state.searchtokenModal = action.payload;
   },
-  setGereratorModal: (state, action) => {
-    state.gereratorModal = action.payload;
-  },
-  setWinnersModal: (state, action) => {
-    state.winnersModal = action.payload;
+  setFundsModal: (state, action) => {
+    state.fundsModal = action.payload;
   },
 };
